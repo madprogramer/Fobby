@@ -21,7 +21,7 @@ class Fobby(QWidget):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
         label = QLabel(self)
-        pixmap = QPixmap('fobby.gif')
+        pixmap = QPixmap('Fobby.gif')
         label.setPixmap(pixmap)
         self.resize(pixmap.width(),pixmap.height())
         
