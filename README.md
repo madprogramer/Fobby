@@ -1,3 +1,3 @@
 # Fobby
-~~The CoilSnake GUI ~~
+~~The CoilSnake GUI~~
 GUI Generator for YAMLs
