@@ -24,9 +24,31 @@ class Fobby(QWidget):
         label = QLabel(self)
         pixmap = QPixmap('Fobby.gif')
         label.setPixmap(pixmap)
-        self.resize(pixmap.width(),pixmap.height())
+        #self.resize(pixmap.width(),pixmap.height())
         
+        self.createGridLayout()
+
+        #self.textbox = QLineEdit(self)
+        #self.textbox.move(20, 20)
+        #self.textbox.resize(280,40)
+        windowLayout = QVBoxLayout()
+        windowLayout.addWidget(self.horizontalGroupBox)
+        self.setLayout(windowLayout)
         self.show()
+    
+    def createGridLayout(self):
+        self.horizontalGroupBox = QGroupBox("")
+        layout = QGridLayout()
+        layout.setColumnStretch(1, 4)
+        layout.setColumnStretch(2, 4)
+
+        layout.addWidget(QLabel('Let me identify what this is:'),0,0)
+        layout.addWidget(QLineEdit(self),1,0)
+        layout.addWidget(QLabel('Possible Datatype matches'),2,0)
+        layout.addWidget(QLabel('Dunno, yet.'),3,0)
+        
+        self.horizontalGroupBox.setLayout(layout)
+        
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
