@@ -4,7 +4,8 @@
 #Main Goal for this stage: Link widgets to varying datatypes
 
 import os, os.path, random, re, pickle, atexit, sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 
 class Fobby(QWidget):
 
